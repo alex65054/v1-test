@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="da" onpointermove="updateGradient(event)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>About - Airplanes</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function updateGradient(event) {
+            var hoverboxes = document.getElementsByClassName("hoverbox");
+            for (var i = 0; i < hoverboxes.length; i++) {
+                hoverboxes[i].style.marginLeft = (event.clientX-1000) + "px";
+                hoverboxes[i].style.marginTop = (event.clientY-1000) + "px";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <section id="titlebox">
+            <img style="margin-left: auto;" class="titleimage" src="images/vroom.png" alt="Airspeed lines">
+            <img class="titleimage" src="images/titleicon.png" alt="Airbus A320neo">
+            <h1>AIRPLANES</h1>
+        </section>
+        <div style="width: 100vw;">
+            <nav width="100%" style="width: 100%; display: flex;">
+                <div class="navbuttonbox">
+                    <a class="navitem" href="index.html">Home</a>
+                </div>
+                <div class="navbuttonbox">
+                    <a class="navitem" href="gallery.html">Gallery</a>
+                </div>
+                <div class="navbuttonbox">
+                    <a class="activenavitem" href="about.html">About</a>
+                </div>
+            </nav>
+        </div>
+        <div id="navbox" class="hoverbox"></div>
+    </header>
+
+    <main>
+        <p style="word-wrap: break-word;">ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+    </main>
+
+    <footer>
+        <p>Site created by Alexander Elís</p>
+    </footer>
+</body>
+</html>

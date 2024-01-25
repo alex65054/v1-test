@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="da" onpointermove="updateGradient(event)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Gallery - Airplanes</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function updateGradient(event) {
+            var hoverboxes = document.getElementsByClassName("hoverbox");
+            for (var i = 0; i < hoverboxes.length; i++) {
+                hoverboxes[i].style.marginLeft = (event.clientX-1000) + "px";
+                hoverboxes[i].style.marginTop = (event.clientY-1000) + "px";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <section id="titlebox">
+            <img style="margin-left: auto;" class="titleimage" src="images/vroom.png" alt="Airspeed lines">
+            <img class="titleimage" src="images/titleicon.png" alt="Airbus A320neo">
+            <h1>AIRPLANES</h1>
+        </section>
+        <div style="width: 100vw;">
+            <nav width="100%" style="width: 100%; display: flex;">
+                <div class="navbuttonbox">
+                    <a class="navitem" href="index.html">Home</a>
+                </div>
+                <div class="navbuttonbox">
+                    <a class="activenavitem" href="gallery.html">Gallery</a>
+                </div>
+                <div class="navbuttonbox">
+                    <a class="navitem" href="about.html">About</a>
+                </div>
+            </nav>
+        </div>
+        <div id="navbox" class="hoverbox"></div>
+    </header>
+
+    <main>
+        <section class="gallerycontainer">
+            <a target="_blank" href="images/gallery/A380-800.jpg" alt="Airbus A380-800" class="galleryimage" style="background-image: url('images/gallery/A380-800.jpg');">
+                <p class="gallerytext">Airbus A380-800, British Airways</p>
+            </a>
+            <a target="_blank" href="images/gallery/777-200.jpg" alt="Boeing 777-200" class="galleryimage" style="background-image: url('images/gallery/777-200.jpg');">
+                <p class="gallerytext">Boeing 777-200, Air New Zealand</p>
+            </a>
+            <a target="_blank" href="images/gallery/A320neo.jpg" alt="Airbus A320neo" class="galleryimage" style="background-image: url('images/gallery/A320neo.jpg');">
+                <p class="gallerytext">Airbus A320neo, Generic</p>
+            </a>
+            <a target="_blank" href="images/gallery/A350-900.jpg" alt="Boeing 777-200" class="galleryimage" style="background-image: url('images/gallery/A350-900.jpg');">
+                <p class="gallerytext">Boeing 777-200, Qatar Airways</p>
+            </a>
+            <a target="_blank" href="images/gallery/737Max-9.jpg" alt="Boeing 737 Max-9" class="galleryimage" style="background-image: url('images/gallery/737Max-9.jpg');">
+                <p class="gallerytext">Boeing 737 Max-9, Alaska Airlines</p>
+            </a>
+            <a target="_blank" href="images/gallery/717-200.jpg" alt="Boeing 717-200" class="galleryimage" style="background-image: url('images/gallery/717-200.jpg');">
+                <p class="gallerytext">Boeing 717-200, Delta Air Lines</p>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Site created by Alexander Elís</p>
+    </footer>
+</body>
+</html>

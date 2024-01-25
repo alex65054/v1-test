@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="da" onpointermove="updateGradient(event)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Home - Airplanes</title>
+    <!-- Internal style sheet -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function updateGradient(event) {
+            var hoverboxes = document.getElementsByClassName("hoverbox");
+            for (var i = 0; i < hoverboxes.length; i++) {
+                hoverboxes[i].style.marginLeft = (event.clientX-1000) + "px";
+                hoverboxes[i].style.marginTop = (event.clientY-1000) + "px";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <section id="titlebox">
+            <img style="margin-left: auto;" class="titleimage" src="images/vroom.png" alt="Airspeed lines">
+            <img class="titleimage" src="images/titleicon.png" alt="Airbus A320neo">
+            <h1>AIRPLANES</h1>
+            <img class="titleimage" style="margin: 0 0 0 720px; opacity: 10%;" src="images/towers.png" alt="Towers">
+        </section>
+        <div style="width: 100vw;">
+            <nav width="100%" style="width: 100%; display: flex;">
+                <div class="navbuttonbox">
+                    <a class="activenavitem" href="index.html">Home</a>
+                </div>
+                <div class="navbuttonbox">
+                    <a class="navitem" href="gallery.html">Gallery</a>
+                </div>
+                <div class="navbuttonbox">
+                    <a class="navitem" href="about.html">About</a>
+                </div>
+            </nav>
+        </div>
+        <div id="navbox" class="hoverbox"></div>
+    </header>
+
+    <main>
+        <section id="featurebox">
+            <h2 id="featuretitle">Featured Plane of the Year</h2>
+            <article id="featuredarticlebox">
+                <img id=featuredimage src="images/featured-a320neo.jpg" alt="Airbus A320neo">
+                <h3 id="featuredtitle">
+                    <span>A320</span>
+                    <span style="font-size: 82px; margin-left: -124px; margin-top: 24px; color: lightblue;">neo</span>
+                </h3>
+                <p id="featuredtext">
+                    The A320neo brings minimum change with maximum benefit through the availability of two advanced engine choices – Pratt & Whitney’s PurePower PW1100G-JM geared turbofan, and CFM International’s LEAP-1A, both of which provide outstanding operational, economic, and environmental performance.
+                    <br><br>
+                    Also included on the A320neo are Airbus’ Sharklets™, which were pioneered on the A320ceo version. The 2.4-metre-tall wingtip devices are standard on NEO aircraft, and result in up to 4% reduced fuel burn over longer sectors, corresponding to an annual reduction in CO2 emissions of around 900 tonnes per aircraft. Sharklets are incorporated on new-build aircraft, and also are available for retrofit on the earlier A320ceo jetliners.
+                    <br><br>
+                    Also included on the A320neo are Airbus’ SharkletsTM, which were pioneered on the A320ceo version. The 2.4-metre-tall wingtip devices are standard on NEO aircraft, and result in up to 4% reduced fuel burn over longer sectors, corresponding to an annual reduction in CO2 emissions of around 900 tonnes per aircraft. Sharklets are incorporated on new-build aircraft, and also are available for retrofit on the earlier A320ceo jetliners.
+                    <br><br>
+                    Overall, the A320neo delivers 20% fuel savings and CO2 reduction compared to previous-generation Airbus aircraft. 
+                </p>
+            </article>
+            <div class="hoverbox" style="background: radial-gradient(circle, rgb(255, 255, 255) 10%, rgba(0, 0, 0, 0) 50%); height: 1000px; width: 2000px; opacity: 5%;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Site created by Alexander Elís</p>
+    </footer>
+</body>
+</html>
