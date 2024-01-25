@@ -156,19 +156,24 @@ footer p {
     height: 14vw;
     border: 1px solid white;
     margin: 3px;
+    margin-top: calc(3px + 2.5vw);
     background-size: cover;
     background-repeat: no-repeat;
     display: inline-block;
-    transition-property: width, height, margin;
+    transition-property: width, height, margin, z-index;
     transition-duration: 500ms;
+
     overflow: hidden;
+    z-index: 0;
+    position: relative;
 }
 
 .galleryimage:hover {
     width: 25%;
     height: 16.5vw;
-    margin: 3px -5px 3px -5px;
+    margin: 3px calc(3px - 1%);
     cursor: zoom-in;
+    z-index: 1;
 }
 
 .gallerycontainer {
